@@ -27,22 +27,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="n8T-8F-xrO">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="n8T-8F-xrO">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="7hy-QT-lU3"/>
+                                                <constraint firstAttribute="width" constant="90" id="APG-83-Kj4"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukp-Fu-P4Y">
-                                            <rect key="frame" x="95" y="5" width="264" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukp-Fu-P4Y">
+                                            <rect key="frame" x="95" y="5" width="280" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HjP-dD-kOA" customClass="RatingControl" customModule="Food" customModuleProvider="target">
-                                            <rect key="frame" x="98" y="34" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HjP-dD-kOA" customClass="RatingControl" customModule="Food" customModuleProvider="target">
+                                            <rect key="frame" x="95" y="35" width="252" height="44"/>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HjP-dD-kOA" firstAttribute="top" secondItem="ukp-Fu-P4Y" secondAttribute="bottom" constant="10" id="AwY-0i-nL2"/>
+                                        <constraint firstItem="n8T-8F-xrO" firstAttribute="top" secondItem="NcG-9D-RSt" secondAttribute="top" id="IpD-2m-r4I"/>
+                                        <constraint firstItem="n8T-8F-xrO" firstAttribute="leading" secondItem="NcG-9D-RSt" secondAttribute="leading" id="YmY-Cc-8Ci"/>
+                                        <constraint firstItem="ukp-Fu-P4Y" firstAttribute="top" secondItem="NcG-9D-RSt" secondAttribute="top" constant="5" id="jkK-bi-xfq"/>
+                                        <constraint firstItem="ukp-Fu-P4Y" firstAttribute="leading" secondItem="n8T-8F-xrO" secondAttribute="trailing" constant="5" id="mWB-c3-b1k"/>
+                                        <constraint firstAttribute="trailing" secondItem="ukp-Fu-P4Y" secondAttribute="trailing" id="uDH-jW-hla"/>
+                                        <constraint firstItem="HjP-dD-kOA" firstAttribute="leading" secondItem="n8T-8F-xrO" secondAttribute="trailing" constant="5" id="yM6-T7-wRe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLable" destination="ukp-Fu-P4Y" id="H59-oq-3w4"/>
