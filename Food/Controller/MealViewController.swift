@@ -8,9 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var mealLabel: UILabel!
     @IBOutlet weak var mealTextField: UITextField!
     @IBOutlet weak var mealPicture: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
@@ -25,10 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resignTextViewBeResponder()
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        mealLabel.text = mealTextField.text
     }
     
     //MARK: - Button Methods
